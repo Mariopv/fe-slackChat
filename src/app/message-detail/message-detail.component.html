@@ -1,6 +1,14 @@
 <div>
   <ng-template #user>
-    <span class="box text-right">{{ message.text }}</span>
+    <span class="box text-right">
+      {{ message.text }}
+      <button *ngIf="!isClosed"
+              class="btn btn-danger btn-sm"
+              title="Close conversation with Temedica Support Team"
+              (click)="close()">
+        Close
+      </button>
+    </span>
   </ng-template>
   <div *ngIf="message.channel === 'support'; else user">
     <i class="fa fa-phone xsmall">Temedica Support</i>

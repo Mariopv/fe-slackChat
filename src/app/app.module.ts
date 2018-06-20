@@ -9,11 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { ChatComponent } from './chat/chat.component';
 import { MessageListComponent } from './message-list/message-list.component';
 import { MessageDetailComponent } from './message-detail/message-detail.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import {HttpModule} from '@angular/http';
-import {CommonModule} from '@angular/common';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [

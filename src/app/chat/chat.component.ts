@@ -29,7 +29,7 @@ export class ChatComponent implements OnDestroy {
     const msg: Message = new Message();
     msg.text =  this.message.value;
     msg.user = 'temedica';
-    msg.channel = 'support';
+    msg.channel = '';
     msg.ts = '123456';
     this.subscribe = this.service.send(msg).subscribe((res: Message) => {
       this.message.setValue('');
