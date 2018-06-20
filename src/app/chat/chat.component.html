@@ -1,0 +1,12 @@
+<div class="widget">
+
+  <form [formGroup]="form" novalidate class="form-inline" (submit)="send()">
+
+    <textarea class="form-control col-sm-10" rows="1" formControlName="message" maxlength="{{ maxlength }}"></textarea>
+    <button type="submit" class="btn btn-success" [disabled]="!form.valid" title="Send">
+      Send
+    </button>
+
+  </form>
+</div>
+

@@ -1,0 +1,20 @@
+.widget {
+  margin: 5px;
+  border-radius: 6px;
+  background-color: lightgrey;
+  padding: 5px;
+  display: block;
+  height: 800px;
+}
+
+textarea {
+  margin-right: 5px;
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+

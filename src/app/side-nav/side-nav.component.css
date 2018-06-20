@@ -1,0 +1,7 @@
+.navbar-brand, .nav-link {
+  cursor: pointer;
+}
+
+.nav-logout {
+  width: 100px;
+}
