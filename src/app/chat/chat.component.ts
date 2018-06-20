@@ -33,6 +33,7 @@ export class ChatComponent implements OnDestroy {
     msg.ts = '123456';
     this.subscribe = this.service.send(msg).subscribe((res: Message) => {
       this.message.setValue('');
+      this.service.refresh();
     });
   }
 
