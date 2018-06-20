@@ -1,2 +1,11 @@
-<i *ngIf="message.channel === 'support'" class="fa fa-phone xsmall">Temedica Support</i>
-<span class="box">{{ message.text }}</span>
+<div>
+  <ng-template #user>
+    <span class="box text-right">{{ message.text }}</span>
+  </ng-template>
+  <div *ngIf="message.channel === 'support'; else user">
+    <i class="fa fa-phone xsmall">Temedica Support</i>
+    <span class="box text-left">{{ message.text }}</span>
+  </div>
+
+</div>
+
