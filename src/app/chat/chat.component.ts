@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {MessageService} from '../service/message.service';
 
 @Component({
   selector: 'app-chat',
@@ -11,7 +12,8 @@ export class ChatComponent {
   form: FormGroup;
   maxlength = 250;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+              private service: MessageService) {
     this.form = this.fb.group(
       {
         message: [null, Validators.required]
@@ -19,7 +21,9 @@ export class ChatComponent {
   }
 
   send(msg: string) {
-    console.log('sending', msg);
+    this.service.send(msg).subscribe( res => {
+      console.log('sending', res);
+    });
   }
 
 }

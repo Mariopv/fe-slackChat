@@ -1,3 +1,8 @@
-<p>
-  message-list works!
-</p>
+<div class="col-sm-12">
+  <ul>
+    <li *ngFor="let message of messages">
+      <app-message-detail [message]="message"></app-message-detail>
+    </li>
+  </ul>
+</div>
+

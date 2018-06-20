@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MessageService} from '../service/message.service';
+import {Message} from '../service/message';
 
 @Component({
   selector: 'app-message-list',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageListComponent implements OnInit {
 
-  constructor() { }
+  messages: Message[];
+
+  constructor(private service: MessageService) {
+    this.service.getAll().subscribe(
+      messages => this.messages = messages
+    );
+  }
 
   ngOnInit() {
   }
