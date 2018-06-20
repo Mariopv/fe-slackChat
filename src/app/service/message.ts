@@ -1,5 +1,11 @@
 export class Message {
-  content: string;
-  userOrigin: string;
-  userDestiny: string;
+  token: string;
+  challenge: string;
+  type: string;
+  text: string;
+  channel: string;
+  user: string;
+  ts: string;
+  event: string;
+  attachments: any;
 }

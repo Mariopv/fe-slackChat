@@ -10,8 +10,6 @@ export class MessageDetailComponent {
 
   @Input('message') message: Message;
 
-  constructor() {
-
-  }
+  constructor() {}
 
 }

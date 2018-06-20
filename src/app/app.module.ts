@@ -10,6 +10,9 @@ import { ChatComponent } from './chat/chat.component';
 import { MessageListComponent } from './message-list/message-list.component';
 import { MessageDetailComponent } from './message-detail/message-detail.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
+import {CommonModule} from '@angular/common';
 
 
 @NgModule({
@@ -24,6 +27,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([

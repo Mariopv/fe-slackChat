@@ -1,5 +1,6 @@
 ul {
   width: 950px;
+  height: 0px;
 }
 
 li {
@@ -7,6 +8,14 @@ li {
   width: fit-content;
 }
 
-
+.scrollable {
+  height: 675px;
+  overflow: auto;
+  width: 68em;
+  border: 1px solid grey;
+  box-shadow: 5px 5px 2px lightgrey;
+  border-radius: 2px;
+  padding-top: 5px;
+}
 
 

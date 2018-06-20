@@ -1,5 +1,11 @@
 <div class="container-fluid">
 
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1>Temedica Chat</h1>
+    </div>
+  </div>
+
   <div class="row size">
     <app-message-list></app-message-list>
   </div>
@@ -8,7 +14,7 @@
     <div class="col-sm-12">
       <form [formGroup]="form" novalidate class="form-inline" (submit)="send()">
 
-        <textarea class="form-control col-sm-10" rows="1" formControlName="message" maxlength="{{ maxlength }}"></textarea>
+        <textarea class="form-control col-sm-11" rows="1" formControlName="message" maxlength="{{ maxlength }}"></textarea>
         <button type="submit" class="btn btn-success" [disabled]="!form.valid" title="Send">
           Send
         </button>
