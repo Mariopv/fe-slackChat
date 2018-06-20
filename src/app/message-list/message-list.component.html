@@ -1,7 +1,7 @@
 <div #scrollMessages class="col-sm-12 scrollable">
   <ul>
     <li *ngFor="let message of messages">
-      <app-message-detail [message]="message"></app-message-detail>
+      <app-message-detail [message]="message" [lastItem]="true"></app-message-detail>
     </li>
   </ul>
 </div>

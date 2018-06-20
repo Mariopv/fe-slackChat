@@ -11,12 +11,14 @@ export class MessageDetailComponent {
 
   @Input('message') message: Message;
 
-  isClosed: boolean = false;
+  @Input('lastItem') lastItem = true;  // Pending check last written message
+
+  isClosed = false;
 
   constructor() {}
 
   close() {
-    if (confirm('Are you sure you would like to finish the conversation?')) {
+    if (this.lastItem && confirm('Are you sure you would like to finish the conversation?')) {
       console.log('Conversation has been close');
       this.isClosed = true;
     }
